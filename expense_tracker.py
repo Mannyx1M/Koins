@@ -162,7 +162,7 @@ def summarize_expenses(expense_file_path, budget, budget_period):
     for category, amount in amount_by_category.items():
         print(f"{category}: £{amount:.2f}")
 
-    # Calculate total spending
+    # This is for the total spending
     total_spent = sum(expense.amount for expense in expenses)
 
     remaining_budget = budget - total_spent
@@ -172,7 +172,7 @@ def summarize_expenses(expense_file_path, budget, budget_period):
     print(f"Total Spent: £{total_spent:.2f}")
     print(f"Budget Remaining: £{remaining_budget:.2f}")
 
-    # Calculate daily spending allowance
+    # daily spending allowance
     remaining_days = (end_date - today).days + 1
 
     daily_budget = remaining_budget / remaining_days
